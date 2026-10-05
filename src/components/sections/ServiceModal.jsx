@@ -9,11 +9,23 @@ export default function ServiceModal({ service, onClose }) {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') onClose();
     };
+
+    // Bloqueo total del scroll en html y body para prevenir que el fondo se mueva
+    const prevBodyOverflow = document.body.style.overflow;
+    const prevHtmlOverflow = document.documentElement.style.overflow;
+
     document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+    document.body.classList.add('modal-scroll-lock');
+    document.documentElement.classList.add('modal-scroll-lock');
+
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = prevBodyOverflow;
+      document.documentElement.style.overflow = prevHtmlOverflow;
+      document.body.classList.remove('modal-scroll-lock');
+      document.documentElement.classList.remove('modal-scroll-lock');
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [onClose]);

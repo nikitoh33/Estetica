@@ -89,6 +89,14 @@ body {
   overflow-x: hidden;
 }
 
+/* Bloqueo estricto de scroll para modales abiertos */
+html.modal-scroll-lock,
+body.modal-scroll-lock {
+  overflow: hidden !important;
+  height: 100% !important;
+  touch-action: none;
+}
+
 /* Enfoque y accesibilidad */
 button:focus,
 a:focus,
