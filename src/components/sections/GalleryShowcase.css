@@ -1,0 +1,34 @@
+/* src/components/sections/GalleryShowcase.css */
+
+.gallery-showcase-section {
+  padding: 5.5rem 0 4rem;
+  background-color: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-header {
+  margin-bottom: 2rem;
+}
+
+.gallery-canvas-wrapper {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .gallery-showcase-section {
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .gallery-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .gallery-canvas-wrapper {
+    height: 380px;
+  }
+}

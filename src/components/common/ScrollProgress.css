@@ -1,0 +1,20 @@
+/* src/components/common/ScrollProgress.css */
+
+.scroll-progress-track {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3.5px;
+  background: transparent;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary-light), var(--color-primary), var(--color-gold));
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 0 10px rgba(183, 131, 103, 0.6);
+  transition: width 0.1s ease-out;
+}

@@ -1,122 +1,71 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import WhatsAppButton from './components/common/WhatsAppButton';
+import CurvedBanner from './components/common/CurvedBanner';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import Hero from './components/sections/Hero';
+import Services from './components/sections/Services';
+import CenterPillarsStack from './components/sections/CenterPillarsStack';
+import Experience from './components/sections/Experience';
+import GalleryShowcase from './components/sections/GalleryShowcase';
+import Testimonials from './components/sections/Testimonials';
+import Faq from './components/sections/Faq';
+import Contact from './components/sections/Contact';
+import { useScrollReveal } from './hooks/useScrollReveal';
+import { curvedRibbonText } from './data/mockData';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  // Inicializamos el observador de scroll para animaciones de revelado
+  useScrollReveal();
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="app-main-layout">
+      {/* Navegación superior con desenfoque de cristal */}
+      <Navbar />
 
-      <div className="ticks"></div>
+      <main>
+        {/* Sección Hero con métricas compactas, visuales y badge circular ReactBits */}
+        <Hero />
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+        {/* Transición curva 1 con cinta ondulada en movimiento continuo */}
+        <CurvedBanner 
+          text={curvedRibbonText}
+        />
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+        {/* Catálogo completo de servicios con filtrado y modal interactivo */}
+        <Services />
+
+        {/* Transición curva 2 hacia las características exclusivas */}
+        <CurvedBanner 
+          text="🌿 CONFORT ABSOLUTO • ATENCIÓN PERSONALIZADA • TECNOLOGÍA CERTIFICADA • COSMÉTICA LIMPIA • DIAGNÓSTICO SIN CARGO 🌿"
+        />
+
+        {/* ScrollStack interactivo con las características y confort del centro */}
+        <CenterPillarsStack />
+
+        {/* Galería 3D CircularGallery que gira sola de forma continua */}
+        <GalleryShowcase />
+
+        {/* Pilares y consulta diagnóstica del método Lumina */}
+        <Experience />
+
+        {/* Testimonios y valoraciones de clientas */}
+        <Testimonials />
+
+        {/* Preguntas frecuentes en acordeón interactivo */}
+        <Faq />
+
+        {/* Ubicación, información y agendamiento directo por WhatsApp */}
+        <Contact />
+      </main>
+
+      {/* Pie de página con enlaces y redes */}
+      <Footer />
+
+      {/* Botón flotante interactivo de WhatsApp con pulsación */}
+      <WhatsAppButton />
+    </div>
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,118 @@
+/* src/components/common/WhatsAppButton.css */
+
+.wa-floating-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  .wa-floating-container {
+    bottom: 1.1rem;
+    right: 1.1rem;
+  }
+
+  .wa-floating-btn {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.wa-floating-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.wa-floating-btn:hover {
+  transform: scale(1.08) translateY(-3px);
+  box-shadow: 0 14px 30px rgba(37, 211, 102, 0.6);
+}
+
+.wa-svg-icon {
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Pulsing rings */
+.wa-pulse-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: #25D366;
+  opacity: 0.6;
+  z-index: 1;
+  animation: waPulse 2.4s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
+.wa-pulse-ring.delay {
+  animation-delay: 1.2s;
+}
+
+@keyframes waPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* Tooltip lateral */
+.wa-tooltip {
+  position: absolute;
+  right: calc(100% + 14px);
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
+  background: var(--color-surface-dark);
+  color: #ffffff;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.wa-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+  border-width: 5px 0 5px 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--color-surface-dark);
+}
+
+.wa-floating-btn:hover .wa-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(0);
+}
+
+@media (max-width: 768px) {
+  .wa-tooltip {
+    display: none; /* En mobile se oculta para no estorbar el viewport */
+  }
+}

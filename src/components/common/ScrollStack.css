@@ -1,0 +1,46 @@
+/* src/components/common/ScrollStack.css */
+
+.scroll-stack-window-container {
+  position: relative;
+  width: 100%;
+  overflow: visible; /* Cero barras de scroll internas */
+}
+
+.scroll-stack-cards-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+
+.scroll-stack-card {
+  position: sticky; /* Apilamiento nativo al hacer scroll en la ventana */
+  width: 100%;
+  max-width: 760px;
+  min-height: auto;
+  margin-bottom: 5rem; /* Distancia entre tarjetas antes de que la siguiente se monte */
+  padding: 1.75rem 2.25rem;
+  border-radius: var(--radius-lg);
+  box-sizing: border-box;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 14px 40px rgba(31, 27, 24, 0.08);
+  transform-origin: top center;
+  will-change: transform, filter;
+  backface-visibility: hidden;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s ease-out;
+}
+
+.scroll-stack-card:last-child {
+  margin-bottom: 1.5rem; /* El último elemento termina de forma compacta sin huecos vacíos */
+}
+
+@media (max-width: 768px) {
+  .scroll-stack-card {
+    padding: 1.25rem 1rem;
+    margin-bottom: 3.5rem;
+    border-radius: var(--radius-md);
+  }
+}

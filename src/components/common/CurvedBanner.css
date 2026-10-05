@@ -1,0 +1,64 @@
+/* src/components/common/CurvedBanner.css */
+
+.curved-banner-container {
+  width: 100%;
+  position: relative;
+  background: transparent; /* Fondo transparente: elimina cortes rectangulares */
+  overflow: visible;
+  user-select: none;
+  line-height: 0;
+  margin: -1.5rem 0; /* Superposición sutil y orgánica entre secciones */
+  z-index: 6;
+  pointer-events: none;
+}
+
+.curved-banner-container.flipped {
+  transform: rotate(180deg);
+}
+
+.curved-banner-wave-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+
+.curved-banner-wave-wrapper.is-mobile {
+  height: 60px;
+}
+
+.curved-banner-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* Cinta curva con brillo sutil y sombra flotante suave */
+.curved-ribbon-track {
+  filter: drop-shadow(0 4px 14px rgba(183, 131, 103, 0.22));
+}
+
+.curved-banner-text {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  fill: var(--color-primary-dark);
+  text-transform: uppercase;
+  filter: drop-shadow(0 1px 2px rgba(255, 255, 255, 0.9));
+}
+
+.curved-banner-text.desktop-text {
+  font-size: 15px;
+  letter-spacing: 0.16em;
+}
+
+.curved-banner-text.mobile-text {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+@media (max-width: 768px) {
+  .curved-banner-container {
+    margin: -1rem 0;
+  }
+}
