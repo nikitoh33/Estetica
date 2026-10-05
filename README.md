@@ -20,7 +20,7 @@
 
 ## 💆‍♀️ Catálogo Completo de Servicios y Tratamientos
 
-Los datos se gestionan de forma centralizada y escalable en `src/data/mockData.js`, abarcando las 6 áreas solicitadas con descripciones profesionales, duración, sesiones sugeridas y beneficios clínicos:
+Los datos se gestionan de forma centralizada y escalable en `src/data/mockData.js`, abarcando las 5 áreas principales con descripciones profesionales, duración, sesiones sugeridas y beneficios clínicos:
 
 1. **Depilación Definitiva & Corporal**:
    - *Depilación Láser Diodo Trío*: Cabezal criogénico a sub-cero (-5°C) que insensibiliza la zona; 100% indoloro y seguro en todo fototipo.
@@ -37,10 +37,6 @@ Los datos se gestionan de forma centralizada y escalable en `src/data/mockData.j
 5. **Visagismo de Cejas & Mirada**:
    - *Diseño & Perfilado de Cejas con Tinte Botánico / Henna*: Mapeo con hilo para definir simetría facial.
    - *Lifting de Pestañas con Lash Botox de Queratina*: Curvatura natural de pestañas con sellado de ceramidas y colágeno.
-6. **Masajes Terapéuticos & Descontracturantes**:
-   - *Masaje Descontracturante Profundo con Piedras Volcánicas*: Presión focalizada combinada con el calor sedativo del basalto en cuello y espalda.
-   - *Masaje Relajante Antiestrés & Aromaterapia Sensorial*: Maniobras envolventes con aceites tibios de lavanda francesa y vainilla.
-   - *Drenaje Linfático Manual (Método Vodder / Post-Quirúrgico)*: Activación circulatoria y desinflamación para postoperatorios o retención de líquidos.
 
 ---
 

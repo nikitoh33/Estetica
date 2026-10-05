@@ -28,8 +28,7 @@ export const serviceCategories = [
   { id: "facial", name: "Limpieza Facial", icon: "Droplets" },
   { id: "corporal", name: "Corporales & Reductores", icon: "Flame" },
   { id: "unas", name: "Uñas", icon: "Gem" },
-  { id: "cejas", name: "Cejas & Pestañas", icon: "Eye" },
-  { id: "masajes", name: "Masajes Terapéuticos", icon: "HeartHandshake" }
+  { id: "cejas", name: "Cejas & Pestañas", icon: "Eye" }
 ];
 
 export const servicesData = [
@@ -254,60 +253,6 @@ export const servicesData = [
       "Estimula el crecimiento natural de la pestaña"
     ],
     image: "https://images.unsplash.com/photo-1583001931096-959e9a1a6223?auto=format&fit=crop&w=800&q=80"
-  },
-
-  // 6. MASAJES
-  {
-    id: "masaje-descontracturante-piedras",
-    category: "masajes",
-    title: "Masaje Descontracturante Profundo con Piedras Volcánicas",
-    badge: "Alivio Inmediato",
-    popular: true,
-    duration: "60 o 80 min",
-    sessions: "A demanda / Quincenal",
-    shortDesc: "Presión media-fuerte focalizada en contracturas de cuello, espalda y hombros, combinada con el calor sedativo del basalto.",
-    fullDesc: "Sesión diseñada para disolver nudos musculares y tensiones acumuladas por estrés postural. El calor radiante de las piedras volcánicas penetra profundamente en la musculatura antes de las maniobras de fricción, percusión y estiramientos miofasciales.",
-    benefits: [
-      "Alivio instantáneo de dolores cervicales y lumbares",
-      "Liberación de toxinas y mejora de la oxigenación muscular",
-      "Aceites esenciales desinflamatorios (árnica, romero y eucalipto)",
-      "Entorno de cromoterapia y sonido envolvente"
-    ],
-    image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: "masaje-relajante-aromaterapia",
-    category: "masajes",
-    title: "Masaje Relajante Antiestrés & Aromaterapia Sensorial",
-    badge: "Relax Total",
-    popular: false,
-    duration: "60 min",
-    sessions: "Semanal / Quincenal",
-    shortDesc: "Maniobras suaves y fluidas con aceites calientes de lavanda francesa y vainilla para calmar el sistema nervioso.",
-    fullDesc: "Un ritual inmersivo pensado para desconectar de la rutina. Los movimientos envolventes y continuos reducen los niveles de cortisol, estimulan la serotonina y promueven una relajación física y mental absoluta.",
-    benefits: [
-      "Disminuye la ansiedad y mejora la calidad del sueño",
-      "Hidratación dérmica intensiva con aceites tibios orgánicos",
-      "Equilibrio energético integral"
-    ],
-    image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    id: "drenaje-linfatico-manual",
-    category: "masajes",
-    title: "Drenaje Linfático Manual (Vodder / Post-Quirúrgico)",
-    badge: "Salud & Desinflamación",
-    popular: false,
-    duration: "60 min",
-    sessions: "Según indicación médica",
-    shortDesc: "Maniobras rítmicas y extremadamente suaves que activan la circulación linfática y deshinchan tejidos.",
-    fullDesc: "Realizado por kinesiólogas y esteticistas matriculadas según el método clásico de Vodder. Es el tratamiento de referencia para piernas cansadas, retención hídrica, edemas y recuperación post-cirugías plásticas o cesáreas.",
-    benefits: [
-      "Favorece la reabsorción de líquidos y hematomas",
-      "Efecto sedante sobre el dolor e inflamación",
-      "Apto para embarazadas y postoperatorios"
-    ],
-    image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80"
   }
 ];
 
@@ -369,9 +314,9 @@ export const testimonialsData = [
   {
     id: 4,
     name: "Lucía Benítez",
-    service: "Masaje Descontracturante con Piedras",
+    service: "Dermaplaning Médico & Glow Facial",
     rating: 5,
-    text: "Llegué con un dolor cervical terrible por el trabajo en computadora. La sesión con piedras calientes y aromaterapia me reseteó por completo. Salí flotando. Ya tengo mi turno fijo cada 15 días.",
+    text: "Mi piel cambió radicalmente desde que empecé con el dermaplaning y el protocolo iluminador. El espacio transmite una paz tremenda y las profesionales son súper cuidadosas.",
     avatar: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80",
     verified: true
   }
@@ -404,13 +349,13 @@ export const faqsData = [
   }
 ];
 
-export const curvedRibbonText = "✨ LUMINA ESTÉTICA AVANZADA • BIENESTAR SENSORIAL • CIENCIA DÉRMICA • TECNOLOGÍA LÁSER • MODELADO CORPORAL • ARTE EN UÑAS • MIRADA SUBLIME • MASAJES TERAPÉUTICOS ✨";
+export const curvedRibbonText = "✨ LUMINA ESTÉTICA AVANZADA • BIENESTAR SENSORIAL • CIENCIA DÉRMICA • TECNOLOGÍA LÁSER • MODELADO CORPORAL • ARTE EN UÑAS • MIRADA SUBLIME ✨";
 
 export const galleryItems = [
   { image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=700&q=80", text: "Lifting Facial & Glow" },
   { image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=700&q=80", text: "Santuario de Calma" },
   { image: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=700&q=80", text: "Higiene con Diamante" },
-  { image: "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=700&q=80", text: "Piedras Volcánicas" },
+  { image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=700&q=80", text: "Lash Botox & Mirada" },
   { image: "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=700&q=80", text: "Manicura Rusa & Spa" },
   { image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=700&q=80", text: "Visagismo de Cejas" },
   { image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=700&q=80", text: "Maderoterapia Corporal" },

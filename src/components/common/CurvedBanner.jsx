@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import './CurvedBanner.css';
 
 export default function CurvedBanner({
-  text = "✨ LUMINA ESTÉTICA • ARTE & CIENCIA DÉRMICA • TECNOLOGÍA LÁSER • MODELADO CORPORAL • BIENESTAR SENSORIAL • CEJAS & PESTAÑAS • UÑAS ESCULPIDAS • MASAJES TERAPÉUTICOS ✨",
+  text = "✨ LUMINA ESTÉTICA • ARTE & CIENCIA DÉRMICA • TECNOLOGÍA LÁSER • MODELADO CORPORAL • BIENESTAR SENSORIAL • CEJAS & PESTAÑAS • UÑAS ESCULPIDAS ✨",
   flip = false
 }) {
   const [offset, setOffset] = useState(0);

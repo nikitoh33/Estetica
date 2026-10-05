@@ -30,7 +30,7 @@ export default function Hero() {
           <p className="hero-description">
             {/* En Desktop: descripción extendida con todos los servicios */}
             <span className="hero-desc-desktop">
-              Experimenta protocolos médicos y holísticos diseñados a tu medida: depilación definitiva sin dolor, limpiezas faciales profundas, modelado corporal intensivo, cuidado de uñas, visagismo de cejas y masajes terapéuticos.
+              Experimenta protocolos médicos y holísticos diseñados a tu medida: depilación definitiva sin dolor, limpiezas faciales profundas, modelado corporal intensivo, cuidado de uñas y visagismo de cejas.
             </span>
             {/* En Móvil: versión concisa y elegante que evita sobrecargar la pantalla */}
             <span className="hero-desc-mobile">
